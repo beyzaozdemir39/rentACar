@@ -19,13 +19,10 @@ public class Brand {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id") //PK
     private int id;
+
     @Column(name= "name")
     private String name;
 
     @OneToMany(mappedBy = "brand")
     List<Model> models;
-
-
-
-
 }
